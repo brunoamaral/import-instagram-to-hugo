@@ -18,10 +18,10 @@ instagramdir="instagram"
 
 # Dependency check
 
-command -v instaloader >/dev/null 2>&1 || { echo >&2 "I require Instaloader but it's not installed. Aborting.";  }
-command -v xzcat >/dev/null 2>&1 || { echo >&2 "I require xzcat but it's not installed. Aborting.";  }
-command -v jq >/dev/null 2>&1 || { echo >&2 "I require jq but it's not installed. Aborting.";  }
-command -v hugo >/dev/null 2>&1 || { echo >&2 "I require hugo but it's not installed. Aborting.";  }
+command -v instaloader >/dev/null 2>&1 || { echo >&2 "I require Instaloader but it's not installed. Aborting."; exit 1 }
+command -v xzcat >/dev/null 2>&1 || { echo >&2 "I require xzcat but it's not installed. Aborting."; exit 1 }
+command -v jq >/dev/null 2>&1 || { echo >&2 "I require jq but it's not installed. Aborting."; exit 1 }
+command -v hugo >/dev/null 2>&1 || { echo >&2 "I require hugo but it's not installed. Aborting."; exit 1 }
 
 setup() {
   cd /Users/brunoamaral/Labs/instagram; 
