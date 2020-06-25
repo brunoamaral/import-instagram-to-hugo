@@ -25,7 +25,7 @@ command -v jq >/dev/null 2>&1 || { echo >&2 "I require jq but it's not installed
 command -v hugo >/dev/null 2>&1 || { echo >&2 "I require hugo but it's not installed. Aborting."; exit 1 }
 
 setup() {
-  cd /Users/brunoamaral/Labs/instagram; 
+  cd $directoryWithInstagramPosts;
   instaloader --fast-update --geotags --login=$instagramUser $instagramUser
 }
 
