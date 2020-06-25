@@ -1,3 +1,4 @@
+
 #!/bin/zsh
 ## USAGE
 
@@ -81,12 +82,6 @@ update-post() {
     cp ${1:r:r}(*.jpg|*.mp4) $destination
   else
     echo 'post exists: '$post_title
-    # exists=$(ls -alh  content/instagram/$date-$time$post_slug/ &> /dev/null | wc -l | sed -e 's/^[[:space:]]*//')
-    # if [[ $exists -gt 0 ]]; then
-    #   id=$(($exists + 1))
-    #   hugo new instagram/$date-$time$post_slug-$id/index.md
-    #   cp ${1:r:r}(*.jpg|*.mp4) content/instagram/$date-$time$post_slug-$id/
-    # fi
   fi
 
 }  >&2
